@@ -1,17 +1,23 @@
-function addNewInformation(){
-  elementos = document.querySelectorAll("input[name='casa'")
+function saveHouse() {
+  let area = document.querySelector("input[name='area']").value
+  let number = document.querySelector("input[name='number']").value
+  let neighborhood = document.querySelector("input[name='neighborhood']").value
+  let city = document.querySelector("input[name='city']").value
   
-  existeDiv = document.querySelector("div#lista-casas")
+  let newListValue = document.createElement("li")
+  newListValue.innerText = area + "m², número " + number + " (" + neighborhood + " - " + city + ")"
 
-  alert(existeDiv)
-  if (existeDiv == null){
-    var divNova = document.createElement("div");
-    divNova.setAttribute("id", "lista-casas");
-    divNova.appendChild(conteudoNovo);
-  
-    // adiciona o novo elemento criado e seu conteúdo ao DOM
-    var divAtual = document.getElementById("div1");
-    document.body.insertBefore(divNova, divAtual);
-  }
+  let removeButton = document.createElement("button")
+  removeButton.type = "button"
+  removeButton.innerText = "Remover"
+  removeButton.setAttribute("onclick", "removeHouse(this)")
 
+  newListValue.appendChild(removeButton)
+
+  document.getElementById("house-list").appendChild(newListValue)
+}
+
+function removeHouse(button) {
+  let liToRemove = button.parentNode
+  document.getElementById("house-list").removeChild(liToRemove)
 }
