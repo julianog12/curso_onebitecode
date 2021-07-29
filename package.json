@@ -1,0 +1,28 @@
+{
+  "name": "npm_curso",
+  "version": "1.0.0",
+  "description": "Curso OneBiteCode",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julianog12/curso_onebitecode.git"
+  },
+  "author": "Juliano Garcia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/julianog12/curso_onebitecode/issues"
+  },
+  "homepage": "https://github.com/julianog12/curso_onebitecode#readme",
+  "dependencies": {
+    "core-js": "^3.15.2",
+    "moment": "^2.29.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8"
+  }
+}
